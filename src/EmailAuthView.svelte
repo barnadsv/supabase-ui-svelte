@@ -34,19 +34,19 @@
 </script>
 
 <form on:submit|preventDefault={submit}>
-  <Input name="email" type="email" label="Email address" icon="mail" bind:value={email}/>
-  <Input name="password" type="password" label="Password" icon="key" bind:value={password}/>
+  <Input name="email" type="email" label="E-mail" icon="mail" bind:value={email}/>
+  <Input name="password" type="password" label="Senha" icon="key" bind:value={password}/>
 
   {#if view == 'sign_up'}
-    <Button block primary size="large" {loading} icon="inbox">Sign up</Button>
+    <Button block primary size="large" {loading} icon="inbox">Cadastrar</Button>
     <div class="links">
-      <LinkButton on:click={() => setView('magic_link')}>Sign in with magic link</LinkButton>
-      <LinkButton on:click={() => setView('sign_in')}>Do you have an account? Sign in</LinkButton>
+      <LinkButton on:click={() => setView('magic_link')}>Login com link mágico de autenticação</LinkButton>
+      <LinkButton on:click={() => setView('sign_in')}>Você tem uma conta? Login</LinkButton>
     </div>
   {:else}
-    <Button block primary size="large" {loading} icon="inbox">Sign in</Button>
+    <Button block primary size="large" {loading} icon="inbox">Login</Button>
     <div class="links">
-      <LinkButton on:click={() => setView('sign_up')}>Don't have an account? Sign up</LinkButton>
+      <LinkButton on:click={() => setView('sign_up')}>Não tem uma conta? Cadastro</LinkButton>
     </div>
   {/if}
 

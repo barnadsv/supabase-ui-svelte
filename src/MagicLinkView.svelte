@@ -19,17 +19,17 @@
     if (err)
       error = err.message
     else
-      message = 'Check your email for the magic link.'
+      message = 'Procure em sua caixa de e-mail pelo link mágico de autenticação.'
 
     loading = false
   }
 </script>
 
 <form on:submit|preventDefault={submit}>
-  <Input name="email" type="email" label="Email address" placeholder="Your email address" icon="mail" bind:value={email}/>
-  <Button block primary size="large" {loading} icon="inbox">Send magic link</Button>
+  <Input name="email" type="email" label="E-mail" placeholder="Seu endereço de e-mail" icon="mail" bind:value={email}/>
+  <Button block primary size="large" {loading} icon="inbox">Enviar link mágico de autenticação</Button>
 
-  <LinkButton on:click={() => setView('sign_in')}>Sign in with password</LinkButton>
+  <LinkButton on:click={() => setView('sign_in')}>Login com senha</LinkButton>
 
   {#if message}
     <Text>{message}</Text>

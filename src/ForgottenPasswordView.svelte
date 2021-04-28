@@ -19,17 +19,17 @@
     if (err)
       error = err.message
     else
-      message = 'Check your email for the password reset link'
+      message = 'Procure em sua caixa de e-mail pelo link de recuperação de senha'
 
     loading = false
   }
 </script>
 
 <form on:submit|preventDefault={submit}>
-  <Input name="email" type="email" label="Email address" placeholder="Your email address" icon="mail" bind:value={email}/>
-  <Button block primary size="large" {loading} icon="inbox">Send reset password instructions</Button>
+  <Input name="email" type="email" label="E-mail" placeholder="Seu endereço de e-mail" icon="mail" bind:value={email}/>
+  <Button block primary size="large" {loading} icon="inbox">Enviar instruções de recuperação de senha</Button>
 
-  <LinkButton on:click={() => setView('sign_in')}>Go back to sign in</LinkButton>
+  <LinkButton on:click={() => setView('sign_in')}>Voltar para Login</LinkButton>
 
   {#if message}
     <Text>{message}</Text>
