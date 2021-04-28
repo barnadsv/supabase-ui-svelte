@@ -53,7 +53,7 @@
 </script>
 
 {#if hasProviders}
-  <span class="heading">{view == 'sign_up' ? 'Cadastro' : 'Login'} with</span>
+  <span class="heading">{view == 'sign_up' ? 'Cadastro' : 'Login'} com</span>
 
   <div class="providers" class:horizontal={socialLayout == 'horizontal'}>
     {#each providers as provider}

@@ -2,7 +2,7 @@
   import Icon from './Icon.svelte'
 
   export let block = false
-  export let shadow = false
+  // export let shadow = false
   export let primary = false
   export let size = 'tiny'
   export let loading = false
@@ -47,7 +47,8 @@
   }
 
   button.primary {
-    background: rgba(101, 217, 165);
+    /* background: rgba(101, 217, 165); */
+    background: rgba(154.3872,190.94400000000002,53.85599999999999,1);
     border-color: transparent;
     color: white;
   }
